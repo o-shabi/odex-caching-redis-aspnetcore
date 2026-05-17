@@ -1,0 +1,2 @@
+* text=auto eol=lf
+*.{cs,csproj,sln,props,targets,md,json,yml,yaml} text eol=lf

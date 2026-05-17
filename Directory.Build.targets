@@ -1,0 +1,6 @@
+<Project>
+  <!-- https://github.com/dotnet/sourcelink/blob/main/README.md -->
+  <PropertyGroup Condition="'$(IsPackable)' == 'true' AND '$(RepositoryCommit)' == ''">
+    <RepositoryCommit>$(SourceRevisionId)</RepositoryCommit>
+  </PropertyGroup>
+</Project>

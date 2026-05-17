@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+
+    <RootNamespace>Odex.AspNetCore.Caching.Redis</RootNamespace>
+    <AssemblyName>Odex.AspNetCore.Caching.Redis</AssemblyName>
+    <PackageId>Odex.AspNetCore.Caching.Redis</PackageId>
+
+    <!-- https://learn.microsoft.com/nuget/concepts/package-versioning -->
+    <Version>0.2.0</Version>
+    <AssemblyVersion>0.2.0.0</AssemblyVersion>
+    <FileVersion>0.2.0.0</FileVersion>
+    <InformationalVersion>0.2.0</InformationalVersion>
+
+    <Title>Odex.AspNetCore.Caching.Redis</Title>
+    <Product>Odex.AspNetCore.Caching.Redis</Product>
+    <Description>Opinionated Redis cache wrapper for ASP.NET Core with JSON serialization, SHA-256 key hashing, key prefix, and configurable TTL.</Description>
+    <PackageTags>redis;caching;aspnetcore;distributed-cache;json;sha256;ttl;wrapper;idistributedcache;stackexchange</PackageTags>
+    <PackageReleaseNotes>https://github.com/o-shabi/odex-caching-redis-aspnetcore/blob/main/CHANGELOG.md#020---2026-05-17</PackageReleaseNotes>
+
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\nupkg\</PackageOutputPath>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <NoWarn>$(NoWarn);CS0618</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Odex.AspNetCore.Caching.Redis.Tests" />
+  </ItemGroup>
+
+  <ItemGroup Label="NuGet dependencies">
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup Label="Package content">
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
